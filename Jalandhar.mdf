@@ -1,0 +1,90 @@
+Create Database Jalandhar
+On PRIMARY
+(Name='Jal1_data',
+Filename='/tmp/data/Jal1.mdf',
+size=5,
+maxsize=10,
+filegrowth=10),
+(Name='Jal2_data',
+Filename='/tmp/data/Jal2.mdf',
+size=5,
+maxsize=10,
+filegrowth=10),
+(Name='Jal3_data',
+Filename='/tmp/data/Jal3.ndf',
+size=5,
+maxsize=10,
+filegrowth=10),
+(Name='Jal4_data',
+Filename='/tmp/data/Jal4.ndf',
+size=5,
+maxsize=10,
+filegrowth=10)
+log ON
+(Name='Jal1_log',
+Filename='/tmp/log/Jal1.log',
+Size=5,
+maxsize=10,
+filegrowth=10),
+(Name='Jal2_log',
+Filename='/tmp/log/Jal2.log',
+Size=5,
+maxsize=10,
+filegrowth=10)
+
+Use Jalandhar
+
+create table GST
+(GSTID int,
+ComapnyName varchar(20),
+Address varchar(20),
+Contact varchar(20))
+
+Insert into GST
+values(1,'AB','India','12345')
+
+Insert into GST
+values(2,'BC','India','67890')
+
+Insert into GST
+values(3,'CD','India','23679')
+
+Insert into GST
+values(4,'DE','India','23789')
+
+Insert into GST
+values(5,'FG','India','456781')
+
+Insert into GST
+values(6,'GH','India','67891')
+
+Insert into GST
+values(7,'HI','India','78943')
+
+Insert into GST
+values(8,'JK','India','89432')
+
+Insert into GST
+values(9,'LM','India','342167')
+
+Insert into GST
+values(10,'MN','India','456789')
+
+Select * from GST
+
+Alter Table GST
+Add SLOT1 varchar(20),SLOT2 varchar(20),SLOT3 varchar(20),SLOT4 varchar(20)
+
+Update GST
+SET SLOT1='5%'
+
+Update GST
+SET SLOT2='12%'
+
+Update GST
+SET SLOT3='18%'
+
+update GST
+SET SLOT4='28%'
+
+Select * from GST
